@@ -1,6 +1,7 @@
 
 #include "Header.h"
 
+//Dessa funktioner finns bara i denna filen och jag kistrar in dom i min setup så att koden blir mer effektiv när den kör. 
 static inline void init_ports(void);
 static inline void init_interrupts(void);
 
@@ -15,7 +16,7 @@ void setup()
 	return;
 }
 
-
+// Definerar vad lampan/knappen ska göra
 static inline void init_ports()
 {
 	DDRB = (1 << LED1) | (1 << LED2) | (1 << LED3);
@@ -25,6 +26,7 @@ static inline void init_ports()
 	return;
 }
 
+//Sätter upp mina interrupter
 static inline void init_interrupts()
 {
 	asm("SEI");

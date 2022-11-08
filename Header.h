@@ -44,7 +44,8 @@
 #define RESET_BUTTON_PRESSED (PIND &(1 << RESET_BUTTON))
 #define TWO_JUMP_BUTTON_BACK_PRESSED (PIND &(1 << TWO_JUMP_BUTTON_BACK))
 
-typedef enum {true, false} bool;
+//Gör så att koden kan lösa av tillstånds namnet vad den ska göra
+typedef enum {true, false} bool;	
 	
 typedef enum
 {
@@ -56,7 +57,9 @@ typedef enum
 
 }leds_state_t;
 
-extern leds_state_t diod;
+extern leds_state_t diod; // Gör diod till en globalt namn så att den ses överallt.
+
+//Mina olika funktioner
 
 void setup(void);
 void fsm_reset(void);

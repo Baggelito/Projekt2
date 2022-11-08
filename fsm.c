@@ -1,6 +1,8 @@
 
 #include "Header.h"
-
+/*
+Vad för kod som finns i varje funktion för fsm_reset, fsm_update och fsm_set_output
+*/
 void fsm_reset(void)
 {
 	diod = LEDS_STATE_OFF;
@@ -11,7 +13,8 @@ void fsm_reset(void)
 
 void fsm_update(void)
 {
-	switch(diod)
+	switch(diod) //Använder switch istället för en massa if satser för att lättare kunna skriva min kod.
+				 //Case är i vilket tillstånd koden är i.
 	{
 		case LEDS_STATE_OFF:
 		{

@@ -1,5 +1,9 @@
 
 #include "Header.h"
+/*
+Gör blink funktionerna för alla olika hastigheter 
+*/
+
 
 void blink_slow()
 {
